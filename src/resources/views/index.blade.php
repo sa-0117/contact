@@ -119,7 +119,7 @@
           </div>
           <div class="form__group-content">
             <div class="form__select--text">
-              <select name="inquiry__type" >
+              <select name="inquiry-type" >
                 <option value="選択してください">選択してください</option>
                 <option value=""></option>
                   </select>

@@ -1,3 +1,9 @@
+* {
+    font-family: "Noticia Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .header {
     background: #fff;
     border-bottom: 1px solid #d9c9bb;
