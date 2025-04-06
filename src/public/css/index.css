@@ -1,0 +1,145 @@
+.contact__content {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.contact__heading {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #8b7969;
+}
+
+.form {
+    color: #8b7969;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form__label--required {
+    padding: 4px 6px;
+    margin-left: 5px;
+    background: #fafafa;
+    color: #eebdbc;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text input,
+.form__input--textarea textarea,
+.form__select--text select
+ {
+    padding: 10px;
+    width: 600px;
+    border: 1px solid #f8f6f6;
+    background-color: #f8f6f6;
+
+    appearance: none;
+}
+
+.form__input--text input {
+    height: 40px;
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+}
+
+.form__input--name input,
+.form__input--tell input{
+    padding: 10px;
+    width: 190px;
+    border: 1px solid #f8f6f6;
+    background-color: #f8f6f6;
+    appearance: none;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.form__group-content {
+    width: 75%;
+}
+
+.form__input--name input {
+    width: 270px;
+    margin: 0 20px;
+}
+
+.form__input--tell input {
+    width: 170px;
+    margin: 0 15px;
+}
+
+.form__input--radio {
+    display: flex;
+    margin: 0 15px;
+    gap: 30px;
+}
+
+.custom-radio {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+}
+
+.radio-circle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    border: 1px solid #8b7969;
+    border-radius: 50%;
+    background-color: #fff;
+    pointer-events: none;
+}
+
+.custom-radio input[type="radio"]:checked+.radio-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #8b7969;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 20%;
+    height: 50px;
+    border: none;
+    background: #82766a;
+    color: #fff;
+    cursor: pointer;
+}
