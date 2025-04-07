@@ -20,3 +20,9 @@ Route::get('/confirm', [ContactController::Class, 'confirm']
 );
 Route::get('/thanks', [ContactController::Class, 'thanks']
 );
+Route::get('/thanks', [ContactController::Class, 'thanks']
+);
+Route::get('/login', [ContactController::Class, 'login']
+);
+Route::get('/register', [ContactController::Class, 'register']
+);
