@@ -18,5 +18,5 @@ Route::get('/', [ContactController::Class, 'index']
 );
 Route::get('/confirm', [ContactController::Class, 'confirm']
 );
-Route::get('/thanks', [ContactController::Class, 'index']
+Route::get('/thanks', [ContactController::Class, 'thanks']
 );

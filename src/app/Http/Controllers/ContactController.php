@@ -15,4 +15,9 @@ class ContactController extends Controller
     {
         return view('confirm');
     }
+
+           public function thanks()
+    {
+        return view('thanks');
+    }
 }
