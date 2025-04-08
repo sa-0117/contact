@@ -26,3 +26,5 @@ Route::get('/login', [ContactController::Class, 'login']
 );
 Route::get('/register', [ContactController::Class, 'register']
 );
+Route::get('/admin', [ContactController::Class, 'admin']
+);

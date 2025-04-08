@@ -1,0 +1,126 @@
+.admin__content {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+.admin__heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8b7969;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.admin-sarch__content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.admin-sarch__item input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f8f6f6;
+    appearance: none;
+    color: #8b7969;
+}
+
+.admin-sarch__item input[type="text"] {
+    width: 280px;
+}
+
+.admin-sarch__item input[type="submit"] {
+    background-color: #807768;
+    color: #fff;
+}
+
+.admin-sarch__item input[type="reset"] {
+    background-color: #d9c5b5;
+    color: #fff;
+}
+
+.admin-sarch__item-select-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.admin-sarch__item-select-wrap::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #8b7969;
+    font-size: 12px;
+}
+
+.admin-sarch__item-select-wrap select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    padding-right: 30px;
+    border: 1px solid #ddd;
+    background-color: #f8f6f6;
+    color: #8b7969;
+    width: 100%;
+    box-sizing: border-box;
+    }
+
+.admin-btn__content {
+    margin-bottom: 15px;
+}
+
+.button-submit--success {
+    background: #ede9e6;
+    color: #8d8176;
+    border: 1px solid #ddd;
+}
+
+
+.admin-table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+.admin-table__inner {
+    width: 100%;
+}
+
+.admin-table__header {
+    padding: 15px;
+    width: 20%;
+    border-bottom: 1px solid #fff;
+    background-color: #8b7968;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.admin-table__text {
+    padding: 22px;
+    border-bottom: 1px solid #ddd;
+    color: #8b7969;
+}
+
+.admin-table__row:last-child .admin-table__header,
+.admin-table__row:last-child .admin-table__text {
+    border-bottom-width: 0;
+}
+
+.form__button-submit {
+    color: #8b7969;
+    text-decoration: none;
+    border: 1px solid #e1ded9;
+    background: #fff;
+}
