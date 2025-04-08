@@ -27,7 +27,7 @@ class ContactController extends Controller
 
     public function register()
     {
-        return view('ahth.register');
+        return view('auth.register');
     }
     
 }
