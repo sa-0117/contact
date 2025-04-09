@@ -11,13 +11,15 @@ class ContactController extends Controller
         return view('index');
     }
 
-    public function confirm()
+    public function confirm(request $request)
     {
-        return view('confirm');
+        $contact = $request ->only(['first_name', 'last_name', 'gender', 'email', 'tel1', 'tel2', 'tel3','address', 'building', 'inquiry-type', 'detail']);
+        return view('confirm', compact('contact'));
     }
 
-    public function thanks()
-    {
+    public function store(Request $request)
+    {   
+        $contact = $request ->only(['first_name', 'last_name', 'gender', 'email', 'tel1', 'tel2', 'tel3','address', 'building', 'inquiry-type', 'detail']);
         return view('thanks');
     }
     public function login()

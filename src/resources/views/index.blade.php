@@ -77,7 +77,7 @@
             <span class="form__label--required">※</span>
           </div>
           <div class="form__group-content">
-            <div class="form__input--tell">
+            <div class="form__input--tel">
               <input type="tel" name="tel1" placeholder="090" />-
               <input type="tel" name="tel2" placeholder="1234" />-
               <input type="tel" name="tel3" placeholder="5678" />
@@ -118,9 +118,9 @@
             <span class="form__label--required">※</span>
           </div>
           <div class="form__group-content">
-            <div class="form__select--text">
+            <div class="form__select--text select-wrap">
               <select name="inquiry-type" >
-                <option value="選択してください">選択してください　　　　　　▼</option>
+                <option value="選択してください">選択してください</option>
                 <option value=""></option>
                   </select>
             </div>
@@ -135,7 +135,7 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--textarea">
-              <textarea name="content" placeholder="お問い合わせ内容をご記載ください"></textarea>
+              <textarea name="detail" placeholder="お問い合わせ内容をご記載ください"></textarea>
             </div>
           </div>
         </div>

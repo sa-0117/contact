@@ -31,8 +31,7 @@
 }
 
 .form__input--text input,
-.form__input--textarea textarea,
-.form__select--text select
+.form__input--textarea textarea
  {
     padding: 10px;
     width: 600px;
@@ -51,13 +50,51 @@
 }
 
 .form__input--name input,
-.form__input--tell input{
+.form__input--tel input{
     padding: 10px;
     width: 190px;
     border: 1px solid #f8f6f6;
     background-color: #f8f6f6;
     appearance: none;
 }
+
+.form__select--text {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+}
+
+.select-wrap {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+
+}
+
+.select-wrap::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #8b7969;
+    font-size: 12px;
+}
+
+.select-wrap select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 10px;
+    padding-right: 30px;
+    border: 1px solid #ddd;
+    background-color: #f8f6f6;
+    color: #8b7969;
+    box-sizing: border-box;
+}
+
 
 .form__group {
     display: flex;
@@ -68,21 +105,21 @@
 
 .form__group-content {
     width: 75%;
+    text-align: left;
 }
 
 .form__input--name input {
     width: 270px;
-    margin: 0 20px;
+    margin-right: 20px;
 }
 
-.form__input--tell input {
+.form__input--tel input {
     width: 170px;
-    margin: 0 15px;
+    margin-right: 15px;
 }
 
 .form__input--radio {
     display: flex;
-    margin: 0 15px;
     gap: 30px;
 }
 
