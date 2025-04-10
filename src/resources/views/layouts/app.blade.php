@@ -16,11 +16,19 @@
 <body>
     <header class="header">
         <div class=header__inner>
-            <a class=header__logo href="/">
-            FashionablyLate</a>
+            <div class="header-utilities">
+                <a class=header__logo href="/">
+                FashionablyLate</a>
+
+                @if (!isset($hideNav) || !$hideNav)
+                <nav>
+                    @include('components.nav')
+                </nav>
+                @endif
+
+            </div>
         </div>
     </header>
-
     <main>
         @yield('content')
     </main>      

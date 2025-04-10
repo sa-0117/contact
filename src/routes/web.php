@@ -23,8 +23,9 @@ Route::post('/confirm', [ContactController::Class, 'confirm']);
 Route::post('/store', [ContactController::Class, 'store']
 );
 
-
 Route::get('/login', [AuthController::class, 'entrance'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'show'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
 Route::get('/admin', [AuthController::class, 'admin'])->name('admin');
 

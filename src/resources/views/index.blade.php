@@ -4,6 +4,10 @@
 <link rel="stylesheet" href=" {{ asset('css/index.css') }}">
 @endsection
 
+@php
+  $hideNav = true;
+@endphp
+
 @section('content')
     <div class="contact__content">
       <div class="contact__heading">

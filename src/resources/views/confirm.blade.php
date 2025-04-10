@@ -4,6 +4,10 @@
   <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
 @endsection
 
+@php
+  $hideNav = true;
+@endphp
+
 @section('content')
 
     <div class="confirm__content">
