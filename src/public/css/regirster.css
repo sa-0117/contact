@@ -2,13 +2,13 @@ body {
     background-color: #f1ece7;
 }
 
-.login__content {
+.register__content {
     max-width: 1230px;
     margin: 0 auto;
     padding: 20px 15px;
 }
 
-.login__heading {
+.register__heading {
     text-align: center;
     margin-bottom: 40px;
     color: #8b7969;

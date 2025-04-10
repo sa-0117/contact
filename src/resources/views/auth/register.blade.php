@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-    <div class="login__content">
-      <div class="login__heading">
+    <div class="register__content">
+      <div class="register__heading">
         <h2>Register</h2>
       </div>
       <form class="form" action="/register" method="post">

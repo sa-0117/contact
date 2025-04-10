@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +19,12 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [ContactController::Class, 'index']
 );
-Route::post('/confirm', [ContactController::Class, 'store']
+Route::post('/confirm', [ContactController::Class, 'confirm']);
+Route::post('/store', [ContactController::Class, 'store']
 );
-Route::get('/thanks', [ContactController::Class, 'thanks']
-);
-Route::get('/thanks', [ContactController::Class, 'thanks']
-);
-Route::get('/login', [ContactController::Class, 'login']
-);
-Route::get('/register', [ContactController::Class, 'register']
-);
-Route::get('/admin', [ContactController::Class, 'admin']
-);
+
+
+Route::get('/login', [AuthController::class, 'entrance'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/admin', [AuthController::class, 'admin'])->name('admin');
+

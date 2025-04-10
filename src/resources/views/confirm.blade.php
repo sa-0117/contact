@@ -17,8 +17,8 @@
             <tr>
               <th>お名前</th>
               <td class="confirm-table__text">
-                <input type="text" name="first_name" value="{{ $contact['first_name']}}" readonly />
                 <input type="text" name="last_name" value="{{ $contact['last_name']}}" readonly />
+                <input type="text" name="first_name" value="{{ $contact['first_name']}}" readonly />
               </td>
             </tr>
             <tr>
@@ -56,7 +56,7 @@
             <tr>
               <th>お問い合わせ種類</th>
               <td class="confirm-table__text">
-                <input type="text" name="inquiry-type" value="{{ $contact['inquiry-type']}}" readonly />
+                <input type="text" name="category_id" value="{{ $contact['category_id']}}" readonly />
               </td>
             </tr>
             <tr>

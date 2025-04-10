@@ -9,7 +9,7 @@
       <div class="login__heading">
         <h2>Login</h2>
       </div>
-      <form class="form" action="/login" method="post">
+      <form class="form" method="post" action="{{ route('login') }}"> 
       @csrf
         <div class="form__group">
           <div class="form__group-title">
@@ -20,7 +20,9 @@
           </div>
         </div>
         <div class="form__error">
-
+          @error('email')
+          {{ $message }}
+          @enderror
         </div>
 
         <div class="form__group">
@@ -32,7 +34,9 @@
           </div>
         </div>
         <div class="form__error">
-
+          @error('password')
+          {{ $message }}
+          @enderror
         </div>
   
         <div class="form__button">
