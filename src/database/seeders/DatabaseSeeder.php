@@ -13,8 +13,8 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        Contact::factory()->count(35)->create();
-        
-    }
+{
+    Contact::factory(35)->create();
+}
+
 }

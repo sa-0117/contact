@@ -29,16 +29,4 @@ class ContactController extends Controller
         
         return view('thanks');
     }
-    
-    public function management() {
-        $contacts = Contact::with('category')->Paginate(35);
-        return view('admin.admin', compact('contacts'));
-    }
-
-    public function admin()
-  {
-    $contacts = Contact::with('category')->Paginate(7);
-    return view('admin.admin', compact('contacts'));
-  }
-
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +21,6 @@ Route::get('/', [ContactController::Class, 'index']
 );
 Route::post('/confirm', [ContactController::Class, 'confirm']);
 Route::post('/store', [ContactController::Class, 'store']);
-Route::get('/admin', [ContactController::class, 'management'])->name('admin');
-
 
 Route::get('/login', [AuthController::class, 'entrance'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -33,6 +31,7 @@ Route::post('/logout', function () {
     return redirect('/');
 })->name('logout');
 
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
 
 

@@ -2,6 +2,7 @@
 
 @section('css')
   <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
+
 @endsection
 
 
@@ -14,56 +15,55 @@
       <form class="form" action="/admin" method="get">
         <div class="admin__group">
             <div class="admin-sarch__content">
-                <div class="admin-sarch__item">
-                    <input  type="text" name="name" placeholder="名前やメールアドレスを入力してください">
+              <div class="admin-sarch__item">
+                  <input  type="text" name="name" placeholder="名前やメールアドレスを入力してください">
+              </div>
+              <div class="admin-sarch__item">
+                <div class="admin-sarch__item-select-wrap">
+                  <select name="gender" >
+                    <option value="">性別</option>
+                    <option value="1" {{ request('gender') == '1' ? 'selected' : '' }}>男性</option>
+                    <option value="2" {{ request('gender') == '2' ? 'selected' : '' }}>女性</option>
+                    <option value="3" {{ request('gender') == '3' ? 'selected' : '' }}>その他</option>
+                  </select>
                 </div>
-                <div class="admin-sarch__item">
-                  <div class="admin-sarch__item-select-wrap">
-                    <select name="gender" >
-                      <option value="">性別</option>
-                      <option value="1" {{ request('gender') == '1' ? 'selected' : '' }}>男性</option>
-                      <option value="2" {{ request('gender') == '2' ? 'selected' : '' }}>女性</option>
-                      <option value="3" {{ request('gender') == '3' ? 'selected' : '' }}>その他</option>
-                    </select>
-                  </div>
+              </div>
+              <div class="admin-sarch__item">
+                <div class="admin-sarch__item-select-wrap">
+                  <select name="category_id" >
+                    <option value="">お問い合わせの種類</option>
+                      @foreach ($categories as $category)
+                    <option value="{{ $category->id }}" {{ request('category_id') == $category->id ? 'selected' : '' }}>
+                      {{ $category->content }}
+                    </option>
+                  @endforeach
+                    
+                  </select>
                 </div>
-                <div class="admin-sarch__item">
-                  <div class="admin-sarch__item-select-wrap">
-                    <select name="inquiry-type" >
-                      <option value="お問い合わせの種類">お問い合わせの種類</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="admin-sarch__item">
-                  <div class="admin-sarch__item-select-wrap">
-                    <select name="dete" >
-                      <option value="date">年/月/日</option>
-                    </select>
-                  </div>
-                </div>
+              </div>
+              <div class="admin-sarch__item">
+                <input  type="date" name="date" />
+              </div>
                 <div class="admin-sarch__item">
                   <input  type="submit" value="検索">
                 </div>
-                <div class="admin-sarch__item">
-                  <input  type="reset" value="リセット">
-                </div>
+              <div class="admin-sarch__item">
+                <input  type="reset" value="リセット">
+              </div>
+            </div>
            </div>
            <div class="admin-btn__content">
             <div class="admin-btn__item">
                 <button class="button-submit--success" type="submit">エクスポート</button>
             <div class="pagination">
-            {{ $contacts->links() }}
+            {{ $contacts->appends(request()->query())->links('pagination::tailwind') }}
+
 
 
             </div>
            </div>
         </div>
     </form>
-
-
-
-
-
         <div class="admin-table">
           <table class="admin-table__inner">
             <tr class="admin-table__row">
