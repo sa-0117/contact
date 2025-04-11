@@ -124,3 +124,26 @@
     border: 1px solid #e1ded9;
     background: #fff;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.pagination a,
+.pagination span {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+}
+
+.pagination .current {
+    background-color: #8b7969;
+    color: #fff;
+    font-weight: bold;
+    border-color: #8b7969;
+}

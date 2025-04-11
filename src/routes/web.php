@@ -20,12 +20,19 @@ use App\Http\Controllers\AuthController;
 Route::get('/', [ContactController::Class, 'index']
 );
 Route::post('/confirm', [ContactController::Class, 'confirm']);
-Route::post('/store', [ContactController::Class, 'store']
-);
+Route::post('/store', [ContactController::Class, 'store']);
+Route::get('/admin', [ContactController::class, 'management'])->name('admin');
+
 
 Route::get('/login', [AuthController::class, 'entrance'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'show'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
-Route::get('/admin', [AuthController::class, 'admin'])->name('admin');
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/');
+})->name('logout');
+
+
+
 

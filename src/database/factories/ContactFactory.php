@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Contact;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ContactFactory extends Factory
@@ -23,7 +24,7 @@ class ContactFactory extends Factory
             'address' => $this->faker->streetAddress,
             'building' => $this->faker->secondaryAddress,
             'detail' => $this->faker->realText(),
-            'category_id' => 1,
+            'category_id' => Category::factory(),
         ];
     }
 }

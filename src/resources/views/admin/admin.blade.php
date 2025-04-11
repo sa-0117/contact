@@ -12,8 +12,6 @@
         <h2>Admin</h2>
       </div>
       <form class="form" action="/admin" method="get">
-        @csrf
-
         <div class="admin__group">
             <div class="admin-sarch__content">
                 <div class="admin-sarch__item">
@@ -23,6 +21,9 @@
                   <div class="admin-sarch__item-select-wrap">
                     <select name="gender" >
                       <option value="">性別</option>
+                      <option value="1" {{ request('gender') == '1' ? 'selected' : '' }}>男性</option>
+                      <option value="2" {{ request('gender') == '2' ? 'selected' : '' }}>女性</option>
+                      <option value="3" {{ request('gender') == '3' ? 'selected' : '' }}>その他</option>
                     </select>
                   </div>
                 </div>
@@ -50,6 +51,10 @@
            <div class="admin-btn__content">
             <div class="admin-btn__item">
                 <button class="button-submit--success" type="submit">エクスポート</button>
+            <div class="pagination">
+            {{ $contacts->links() }}
+
+
             </div>
            </div>
         </div>
@@ -69,27 +74,24 @@
               <th class="admin-table__header"></th>
             
             </tr>
+            @foreach ($contacts as $contact)
             <tr>
-                <td class="admin-table__text" >sample</td>
-                <td class="admin-table__text">sample</td>
-                <td class="admin-table__text">sample</td>
-                <td class="admin-table__text">sample</td>
+                <td class="admin-table__text">{{ $contact->last_name }} {{ $contact->first_name }}</td>
+                <td class="admin-table__text">
+                  @if ($contact->gender === 1) 男性
+                  @elseif ($contact->gender === 2) 女性
+                  @else その他
+                  @endif
+                </td>
+                <td class="admin-table__text">{{ $contact->email }}</td>
+                <td class="admin-table__text">{{ $contact->category->content ?? '未設定' }}</td>
                 <td class="admin-table__text">
                 <div class="form__button">
                     <button class="form__button-submit" type="submit" name="action" value="submit">詳細</button>
                 </td>
             </tr>
-
+            @endforeach
             <tr>
-                <td class="admin-table__text">sample</td>
-                <td class="admin-table__text">sample</td>
-                <td class="admin-table__text">sample</td>
-                <td class="admin-table__text">sample</td>
-                <td class="admin-table__text">
-                <div class="form__button">
-                    <button class="form__button-submit" type="submit" name="action" value="submit">詳細</button>
-                </td>
-            </tr>
           </table>
         </div>
     </div>

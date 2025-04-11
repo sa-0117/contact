@@ -7,6 +7,7 @@ use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use Illuminate\Support\Facades\Auth;
 
+
 class AuthController extends Controller
 {
     public function entrance() {
@@ -25,8 +26,5 @@ class AuthController extends Controller
         return redirect()->route('login');
     }
 
-    public function admin() {
-    return view('admin.admin');
-    }
 
 }
