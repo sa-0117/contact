@@ -44,19 +44,18 @@
                 <span class="radio-circle"></span>
                 <span>男性</span>
               </label>
-
               <label class="custom-radio">
                 <input type="radio" name="gender" value="2" {{ old('gender') == 2 ? 'checked' : '' }}>
                 <span class="radio-circle"></span>
                 <span>女性</span>
               </label>
-
               <label class="custom-radio">
                 <input type="radio" name="gender" value="3" {{ old('gender') == 3 ? 'checked' : '' }}>
                 <span class="radio-circle"></span>
                 <span>その他</span>
               </label>
             </div>
+
             <div class="form__error">
               @error('gender')
               {{ $message }}
