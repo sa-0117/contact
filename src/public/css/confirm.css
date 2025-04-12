@@ -48,6 +48,14 @@ table td {
     color: #8b7969;
 }
 
+.confirm-table__text-span {
+    display: inline-block;
+    margin-right: 8px;
+    outline: none;
+    border: none;
+    color: #8b7969;
+}
+
 .confirm-table__row:last-child 
 .confirm-table__header,
 .confirm-table__row:last-child .confirm-table__text {

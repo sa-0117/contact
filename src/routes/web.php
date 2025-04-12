@@ -18,7 +18,7 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', [ContactController::Class, 'index']
-);
+)->name('index');
 Route::post('/confirm', [ContactController::Class, 'confirm']);
 Route::post('/store', [ContactController::Class, 'store']);
 

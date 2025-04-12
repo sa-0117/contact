@@ -19,15 +19,10 @@
                 <div class="thanks__message-back">
                     <p>Thank you</p>
                 </div>
-            
-        
-            <form action="/" method="get">
-                @csrf
-                <div class="form__button">
-                    <button class="form__button-submit" type="submit">HOME</button>
-                    </div>
-                </div>
-            </form>
+            </div>
+            <div class="home__button">
+                <a href="{{ route('index') }}" class="home__button-submit">HOME</a>
+            </div>
         </div>
     </main>    
 </body>

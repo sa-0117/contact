@@ -59,16 +59,26 @@
 }
 
 .form__select--text {
-    position: absolute;
+
     display: inline-block;
     width: 100%;
 }
+
+.form__select--text select {
+    color: #8b7969;
+    background-color: #fff;
+}
+
 
 .select-wrap {
     position: relative;
     display: inline-block;
     width: 40%;
 
+}
+
+.select-wrap option {
+    color: #8b7969;
 }
 
 .select-wrap::after {
@@ -93,6 +103,7 @@
     background-color: #f8f6f6;
     color: #8b7969;
     box-sizing: border-box;
+    color: #8b7969;
 }
 
 
@@ -180,4 +191,10 @@
     background: #82766a;
     color: #fff;
     cursor: pointer;
+}
+
+.select-wrap select,
+.select-wrap option {
+    color: #8b7969 !important;
+    background-color: #f8f6f6 !important;
 }

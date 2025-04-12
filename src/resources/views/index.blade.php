@@ -131,12 +131,14 @@
           </div>
           <div class="form__group-content">
             <div class="form__select--text select-wrap">
-              <select name="category_id">
+              <select name="category_id" id="category_id" style="color: #8b7969; background-color: #f8f6f6;">
+
                 <option value="">選択してください</option>
                 @foreach ($categories as $category)
-                  <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
-                    {{ $category->content }}
-                  </option>
+                <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                {{ $category->name }}
+                </option>
+
                 @endforeach
               </select>
             </div>
