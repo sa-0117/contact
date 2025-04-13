@@ -20,8 +20,8 @@ php artisan db:seed
 
 ##使用技術  
 
-* PHP 8.0  
-* Laravel 10.0  
+* PHP 8.4  
+* Laravel 8.4  
 * MySQL 8.0  
 
 ##ER図
