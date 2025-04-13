@@ -76,12 +76,19 @@
 
 .admin-btn__content {
     margin-bottom: 15px;
+
+}
+.admin-btn__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .button-submit--success {
     background: #ede9e6;
     color: #8d8176;
     border: 1px solid #ddd;
+    height: 50px;
 }
 
 
@@ -89,8 +96,7 @@
     border: 1px solid #ddd;
     border-collapse: collapse;
     width: 70%;
-    margin: 0 auto;
-    
+    margin: 0 auto;  
 }
 
 .admin-table__inner {
@@ -118,32 +124,112 @@
     border-bottom-width: 0;
 }
 
-.form__button-submit {
+.modal__button-submit {
+    display: inline-block;
     color: #8b7969;
     text-decoration: none;
     border: 1px solid #e1ded9;
     background: #fff;
 }
-
 .pagination {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-.pagination a,
-.pagination span {
-    padding: 6px 12px;
+.pagination .page-link {
+    display: inline-block;
+    padding: 5px 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
     color: #333;
     text-decoration: none;
 }
 
-.pagination .current {
-    background-color: #8b7969;
+.pagination .page-item.active .page-link {
+    background-color: #8b7968;
     color: #fff;
-    font-weight: bold;
-    border-color: #8b7969;
+    border-color: #8b7968;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #999;
+    pointer-events: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.modal:target {
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transform: translate(50%, -50%);
+}
+
+.modal-wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    max-height: none;
+    padding: 40px;
+    margin: auto;
+    overflow: visible;
+    background-color: #FEFEFE;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.modal-table__inner {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto
+
+}
+
+.modal-table__inner th,
+.modal-table__inner td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+.modal-table__inner th {
+    width: 30%;
+}
+
+.modal-table__text {
+    word-break: break-word;
+    width: 70%;
+}
+
+.modal-delete-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.modal-delete {
+    display: inline-block;
+    padding: 3px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #e1ded9;
+    background: #bb390d;
 }

@@ -32,6 +32,9 @@ Route::post('/logout', function () {
 })->name('logout');
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::delete('/admin/{id}', [AdminController::class, 'destroy'])->name('admin.destroy');
+
+
 
 
 

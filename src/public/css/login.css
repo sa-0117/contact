@@ -45,6 +45,8 @@ body {
     height: 20px;
     color: #ff0000;
     text-align: left;
+    width: 400px;
+    margin-top: 5px;
 }
 
 .form__group input {

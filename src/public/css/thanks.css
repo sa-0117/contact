@@ -36,22 +36,19 @@
 
 .home__button-submit {
     position: absolute;
-        top: 50%;
-        /* 少し下にずらして中央にかぶせる */
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: inline-block;
-        padding: 10px 30px;
-        background: #82766a;
-        /* 背景色 */
-        color: #fff;
-        border: none;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        /* ボタンに影をつけて立体感 */
-        z-index: 10;
-        /* 背景より手前に出す */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 10px 30px;
+    background: #82766a;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    
 }
